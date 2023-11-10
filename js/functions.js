@@ -47,7 +47,7 @@ var boolean = true; //flase
 var array_num=[1,2,3,4,5,3,4,1.2];
 var array_text = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
 var array_mix = [1, "a",2, "c"];
-var array_mu1 = [
+var array_mul = [
     {name: "gineth", last_name:"trillos", age: "19"},
     {name: "gineth", last_name:"trillos", age: "19"},
     {name: "gineth", last_name:"trillos", age: "19"},
@@ -131,7 +131,25 @@ do{
 //FUNCIONES Y EVENTODS 
 function load_page(){
     alert("la pagina se ha cargado completamente");
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new (date);
+    console.log(date.getMinutes());
+    for( let j= 0; j<array_mul.length;j++){
+        console.log(array_mul[j].name);
+    }
+    }
+function validate(){
+    let nombres = document.getElementById("nombres")
+    if(nombres.value.length > 2){
+        nombres.style.border = "2px solid green";
+        let apellidos = document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus();
+        document.getElementById("nombres").value= "";
+
+    }
 }
+
 function change_color(){
     document.body.style.backgroundColor = "red";
     document.body.style.color = "#fff"
@@ -165,3 +183,5 @@ function change_color(){
     }
     information.innerText = info;
  })
+
+ 
